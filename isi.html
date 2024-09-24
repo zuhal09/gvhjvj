@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I LOVE YOU</title>
+    <link rel="icon web" href="WhatsApp_Image_2024-08-01_at_17.49.01_bac74c86-removebg-preview.png">
+    <style>
+        
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-image: url("7.photo-1536599514254-ee89271345b0.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+            "top-left top-right"
+            "button button"
+            "bottom-left bottom-right"
+            ". bottom-text";
+            gap: 20px;
+            text-align: center;
+            position: relative;
+}
+
+
+.box{
+    width: 150px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #333;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.box-top-left{
+    grid-area: top-left;
+}
+
+.box-top-right{
+    grid-area: bottom-left;
+    height: 300px;
+    width: 120px;
+    font-size: 15px;
+    border-color: #333;
+    background-color: #333;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.text {
+    color: white;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.text-top-right{
+    grid-area:top-right;
+}
+
+.text-bottom-left{
+    grid-area: bottom-left;
+}
+
+.text-bottom{
+    grid-area: bottom-text;
+    position: absolute;
+    width: 150px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button{
+    grid-area: button;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+.button:hover{
+    background-color: aliceblue;
+}
+
+    </style>
+</head>
+<body>
+    <audio id="MyAudio" autoplay>
+        <source src="WhatsApp Audio 2024-09-24 at 12.21.40_19a306bc.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <div class="box box-top-left">
+            <img src="WhatsApp Image 2024-08-01 at 20.13.03_001d6041.jpg" alt="image 1">
+        </div>
+    <div class="box box-top-right">
+        Hey , I hope you're having a great day! I just wanted to let you know that I really enjoy spending time with you and getting to know you better. You always brighten my day and put a smile on my face.
+    </div>
+    <button class="button" id="WhatsAppButton">reply</button>
+    <div class="box box-bottom-left">
+        if you ask me how much i love you, i won't say anytime.I'ii just take you hand,fill thegaps between you fingers and hold on to you until all your doubts are gone.
+    </div>
+    <div class="box box-bottom-right">
+        <img src="WhatsApp Image 2024-08-01 at 20.13.02_34e53385.jpg" alt="image 2">
+    </div>
+    <div class="text text-bottom">
+        happy girlfriend day
+    </div>
+    </div>
+</body>
+<script>
+            document.getElementById('WhatsAppButton').addEventListener('click', function() {
+            // Nomor telepon yang ingin dihubungi (dalam format internasional tanpa tanda +)
+            const phoneNumber = '60183507254'; // Ganti dengan nomor yang sesuai
+             // Pesan yang ingin dikirim
+            const message = 'I LOVE YOU.';
+            // Encode pesan untuk URL
+            const encodedMessage = encodeURIComponent(message);
+            // URL WhatsApp
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            // Buka URL WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+</script>
+</html>
